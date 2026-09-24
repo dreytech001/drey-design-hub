@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="theme-color" content="#6c4df6">
+
+<title>Drey Design Hub</title>
+
+<style>
+
+*{
+
+  box-sizing:border-box;
+
+  margin:0;
+
+  padding:0;
+
+  font-family:Arial,sans-serif;
+
+}
+
+body{
+
+  background:#f5f4ff;
+
+  color:#17142b;
+
+  padding-bottom:90px;
+
+}
+
+header{
+
+  background:linear-gradient(135deg,#6c4df6,#a044ff,#ff4f9a);
+
+  color:white;
+
+  padding:30px 20px 45px;
+
+  border-radius:0 0 32px 32px;
+
+}
+
+.logo{
+
+  font-size:25px;
+
+  font-weight:900;
+
+}
+
+.tagline{
+
+  margin-top:8px;
+
+  opacity:.9;
+
+}
+
+.container{
+
+  max-width:700px;
+
+  margin:auto;
+
+  padding:20px;
+
+}
+
+.hero{
+
+  margin-top:-25px;
+
+  background:white;
+
+  border-radius:24px;
+
+  padding:22px;
+
+  box-shadow:0 10px 30px #00000012;
+
+}
+
+.hero h2{
+
+  margin:12px 0 8px;
+
+  font-size:24px;
+
+}
+
+.hero p{
+
+  color:#666;
+
+  line-height:1.6;
+
+}
+
+.btn{
+
+  border:0;
+
+  padding:13px 18px;
+
+  border-radius:14px;
+
+  background:linear-gradient(135deg,#6c4df6,#a044ff);
+
+  color:white;
+
+  font-weight:bold;
+
+  margin-top:15px;
+
+  cursor:pointer;
+
+}
+
+.section-title{
+
+  margin:28px 0 14px;
+
+  font-size:21px;
+
+}
+
+.card{
+
+  background:white;
+
+  border-radius:20px;
+
+  padding:18px;
+
+  margin-bottom:15px;
+
+  box-shadow:0 7px 25px #0000000c;
+
+}
+
+.progress-info{
+
+  display:flex;
+
+  justify-content:space-between;
+
+}
+
+.progress-box{
+
+  background:#eeeaff;
+
+  height:12px;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  margin-top:12px;
+
+}
+
+.progress-bar{
+
+  height:100%;
+
+  width:0%;
+
+  background:linear-gradient(90deg,#6c4df6,#ff4f9a);
+
+  transition:.4s;
+
+}
+
+.feature-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+
+}
+
+.feature{
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:18px;
+
+  font-size:28px;
+
+  box-shadow:0 6px 20px #0000000b;
+
+}
+
+.feature b,
+
+.feature small{
+
+  display:block;
+
+}
+
+.feature b{
+
+  font-size:15px;
+
+  margin-top:8px;
+
+}
+
+.feature small{
+
+  color:#777;
+
+  font-size:12px;
+
+  margin-top:4px;
+
+}
+
+.course-card{
+
+  color:white;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+}
+
+.course-card:nth-child(1){
+
+  background:linear-gradient(135deg,#6c4df6,#9d5cff);
+
+}
+
+.course-card:nth-child(2){
+
+  background:linear-gradient(135deg,#00a896,#00c9a7);
+
+}
+
+.course-card:nth-child(3){
+
+  background:linear-gradient(135deg,#ff7a18,#ff3d81);
+
+}
+
+.course-card h3{
+
+  margin-bottom:8px;
+
+}
+
+.course-card p{
+
+  opacity:.92;
+
+  line-height:1.5;
+
+}
+
+.course-card button{
+
+  border:0;
+
+  padding:11px 15px;
+
+  border-radius:12px;
+
+  margin-top:15px;
+
+  font-weight:bold;
+
+}
+
+.lesson{
+
+  border-left:5px solid #6c4df6;
+
+}
+
+.lesson-number{
+
+  color:#6c4df6;
+
+  font-weight:bold;
+
+  font-size:13px;
+
+  margin-bottom:7px;
+
+}
+
+.lesson-content{
+
+  line-height:1.7;
+
+  color:#444;
+
+  margin-top:16px;
+
+}
+
+.lesson-content h4{
+
+  margin:17px 0 8px;
+
+  color:#6c4df6;
+
+}
+
+.lesson-content ul{
+
+  margin-left:20px;
+
+}
+
+.complete-btn{
+
+  background:#15a36d;
+
+  border:0;
+
+  color:white;
+
+  padding:13px 16px;
+
+  border-radius:12px;
+
+  margin-top:20px;
+
+  font-weight:bold;
+
+}
+
+.back-btn{
+
+  background:#222;
+
+  color:white;
+
+  border:0;
+
+  padding:11px 15px;
+
+  border-radius:12px;
+
+  margin-bottom:15px;
+
+}
+
+.badge{
+
+  display:inline-block;
+
+  background:#eeeaff;
+
+  color:#6c4df6;
+
+  padding:6px 10px;
+
+  border-radius:20px;
+
+  font-size:12px;
+
+  font-weight:bold;
+
+  margin-top:8px;
+
+}
+
+.profile{
+
+  text-align:center;
+
+}
+
+.avatar{
+
+  width:85px;
+
+  height:85px;
+
+  border-radius:50%;
+
+  background:linear-gradient(135deg,#6c4df6,#ff4f9a);
+
+  color:white;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:32px;
+
+  font-weight:bold;
+
+  margin:0 auto 15px;
+
+}
+
+.profile label{
+
+  display:block;
+
+  text-align:left;
+
+  margin-top:20px;
+
+  font-weight:bold;
+
+}
+
+input{
+
+  width:100%;
+
+  padding:14px;
+
+  border:1px solid #ddd;
+
+  border-radius:12px;
+
+  margin-top:8px;
+
+}
+
+.status-text{
+
+  margin:12px 0;
+
+}
+
+.project-icon{
+
+  font-size:45px;
+
+  margin-bottom:10px;
+
+}
+
+.project-card p{
+
+  color:#666;
+
+  line-height:1.7;
+
+  margin-top:10px;
+
+}
+
+.project-card h4{
+
+  margin-top:18px;
+
+}
+
+.project-card ul{
+
+  margin:12px 0 0 20px;
+
+  line-height:2;
+
+}
+
+.bottom-nav{
+
+  position:fixed;
+
+  bottom:0;
+
+  left:0;
+
+  right:0;
+
+  height:75px;
+
+  background:white;
+
+  display:flex;
+
+  justify-content:space-around;
+
+  align-items:center;
+
+  box-shadow:0 -5px 20px #00000015;
+
+  z-index:100;
+
+}
+
+.nav-btn{
+
+  border:0;
+
+  background:none;
+
+  color:#777;
+
+  font-size:12px;
+
+  text-align:center;
+
+}
+
+.nav-btn span{
+
+  display:block;
+
+  font-size:23px;
+
+  margin-bottom:3px;
+
+}
+
+.nav-btn.active{
+
+  color:#6c4df6;
+
+  font-weight:bold;
+
+}
+
+.hidden{
+
+  display:none!important;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">🎨 Drey Design Hub</div>
+
+  <div class="tagline">Learn • Create • Design • Grow</div>
+
+</header>
+
+<main class="container">
+
+<section id="home">
+
+  <div class="hero">
+
+    <span class="badge">WELCOME 👋</span>
+
+    <h2>Build Your Design Skills 🚀</h2>
+
+    <p>
+
+      Learn graphic design from the basics to practical projects
+
+      through simple lessons and hands-on activities.
+
+    </p>
+
+    <button class="btn" onclick="showPage('courses')">
+
+      Start Learning 🚀
+
+    </button>
+
+  </div>
+
+  <h2 class="section-title">Your Progress 📊</h2>
+
+  <div class="card">
+
+    <div class="progress-info">
+
+      <b id="progressText">0% completed</b>
+
+      <span id="completedCount">0/30</span>
+
+    </div>
+
+    <div class="progress-box">
+
+      <div class="progress-bar" id="mainProgress"></div>
+
+    </div>
+
+  </div>
+
+  <h2 class="section-title">What You'll Learn ✨</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature">
+
+      🎨
+
+      <b>Design</b>
+
+      <small>Fundamentals</small>
+
+    </div>
+
+    <div class="feature">
+
+      🖥️
+
+      <b>CorelDRAW</b>
+
+      <small>Professional tools</small>
+
+    </div>
+
+    <div class="feature">
+
+      📱
+
+      <b>Canva</b>
+
+      <small>Modern designs</small>
+
+    </div>
+
+    <div class="feature">
+
+      🔥
+
+      <b>PixelLab</b>
+
+      <small>Creative graphics</small>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="courses" class="hidden">
+
+  <h2 class="section-title">My Courses 📚</h2>
+
+  <div id="courseList"></div>
+
+</section>
+
+<section id="lessons" class="hidden">
+
+  <button class="back-btn" onclick="showPage('courses')">
+
+    ← Courses
+
+  </button>
+
+  <h2 id="courseTitle" class="section-title"></h2>
+
+  <div id="lessonList"></div>
+
+</section>
+
+<section id="singleLesson" class="hidden">
+
+  <button class="back-btn" onclick="openCourse(currentCourse)">
+
+    ← Lessons
+
+  </button>
+
+  <div class="card lesson">
+
+    <div class="lesson-number" id="lessonNumber"></div>
+
+    <h2 id="lessonTitle"></h2>
+
+    <div class="lesson-content" id="lessonContent"></div>
+
+    <button
+
+      class="complete-btn"
+
+      id="completeButton"
+
+      onclick="completeLesson()">
+
+      ✅ Mark Lesson Complete
+
+    </button>
+
+  </div>
+
+</section>
+
+<section id="project" class="hidden">
+
+  <h2 class="section-title">🏆 Final Project</h2>
+
+  <div class="card project-card">
+
+    <div class="project-icon">🚀</div>
+
+    <h2>Create Your Own Brand</h2>
+
+    <p>
+
+      Create a complete brand design for a fictional business.
+
+    </p>
+
+    <h4>Your project should contain:</h4>
+
+    <ul>
+
+      <li>Business name</li>
+
+      <li>Logo</li>
+
+      <li>Colour palette</li>
+
+      <li>Typography</li>
+
+      <li>Flyer</li>
+
+      <li>Social media design</li>
+
+    </ul>
+
+    <button class="btn" onclick="startProject()">
+
+      Start Project 🚀
+
+    </button>
+
+  </div>
+
+</section>
+
+<section id="profile" class="hidden">
+
+  <div class="card profile">
+
+    <div class="avatar" id="avatar">D</div>
+
+    <h2 id="profileName">Drey Student</h2>
+
+    <p>Graphic Design Learner</p>
+
+    <label>Your Name</label>
+
+    <input
+
+      id="nameInput"
+
+      placeholder="Enter your name">
+
+    <button class="btn" onclick="saveProfile()">
+
+      Save Profile
+
+    </button>
+
+  </div>
+
+  <div class="card">
+
+    <h3>🏆 Learning Status</h3>
+
+    <p class="status-text">
+
+      Lessons completed:
+
+      <b id="profileCompleted">0</b>/30
+
+    </p>
+
+    <span class="badge">
+
+      Drey Design Hub Student
+
+    </span>
+
+  </div>
+
+</section>
+
+</main>
+
+<nav class="bottom-nav">
+
+  <button
+
+    class="nav-btn active"
+
+    onclick="showPage('home',this)">
+
+    <span>🏠</span>
+
+    Home
+
+  </button>
+
+  <button
+
+    class="nav-btn"
+
+    onclick="showPage('courses',this)">
+
+    <span>📚</span>
+
+    Courses
+
+  </button>
+
+  <button
+
+    class="nav-btn"
+
+    onclick="showPage('project',this)">
+
+    <span>🏆</span>
+
+    Project
+
+  </button>
+
+  <button
+
+    class="nav-btn"
+
+    onclick="showPage('profile',this)">
+
+    <span>👤</span>
+
+    Profile
+
+  </button>
+
+</nav>
+
+<script>
+
+const courses = [
+
+{
+
+name:"🎨 Graphic Design Fundamentals",
+
+description:
+
+"Learn the principles and foundations of professional graphic design.",
+
+lessons:[
+
+[
+
+"Introduction to Graphic Design",
+
+`
+
+<h4>What is Graphic Design?</h4>
+
+<p>
+
+Graphic design combines text, images, colours and shapes
+
+to communicate a message visually.
+
+</p>
+
+<h4>Why is it important?</h4>
+
+<ul>
+
+<li>It helps businesses communicate.</li>
+
+<li>It makes information easier to understand.</li>
+
+<li>It helps brands become recognizable.</li>
+
+<li>It is used in advertising and social media.</li>
+
+</ul>
+
+<h4>Assignment</h4>
+
+<p>
+
+Write three places where you see graphic design in everyday life.
+
+</p>
+
+`
+
+],
+
+[
+
+"Elements of Design",
+
+`
+
+<h4>Main Elements</h4>
+
+<p>
+
+The elements of design are the basic building blocks
+
+used to create visual designs.
+
+</p>
+
+<ul>
+
+<li>Line</li>
+
+<li>Shape</li>
+
+<li>Colour</li>
+
+<li>Texture</li>
+
+<li>Space</li>
+
+</ul>
+
+<h4>Assignment</h4>
+
+<p>
+
+Create a simple design using at least three design elements.
+
+</p>
+
+`
+
+],
+
+[
+
+"Principles of Design",
+
+`
+
+<h4>Important Principles</h4>
+
+<ul>
+
+<li>Balance</li>
+
+<li>Contrast</li>
+
+<li>Alignment</li>
+
+<li>Proximity</li>
+
+<li>Repetition</li>
+
+</ul>
+
+<h4>Assignment</h4>
+
+<p>
+
+Find a poster and identify two principles used in it.
+
+</p>
+
+`
+
+],
+
+[
+
+"Colour Theory & Colour Combinations",
+
+`
+
+<h4>Understanding Colour</h4>
+
+<p>
+
+Colours can communicate different moods and help attract attention.
+
+</p>
+
+<ul>
+
+<li>Primary colours</li>
+
+<li>Secondary colours</li>
+
+<li>Warm colours</li>
+
+<li>Cool colours</li>
+
+<li>Complementary colours</li>
+
+</ul>
+
+<h4>Assignment</h4>
+
+<p>
+
+Create three colour combinations for a fictional brand.
+
+</p>
+
+`
+
+],
+
+[
+
+"Typography & Font Selection",
+
+`
+
+<h4>What is Typography?</h4>
+
+<p>
+
+Typography is the art of arranging text so it is readable,
+
+clear and visually attractive.
+
+</p>
+
+<h4>Remember</h4>
+
+<ul>
+
+<li>Choose readable fonts.</li>
+
+<li>Avoid using too many fonts.</li>
+
+<li>Create clear text hierarchy.</li>
+
+</ul>
+
+`
+
+],
+
+[
+
+"Images, Resolution & File Formats",
+
+`
+
+<h4>Image Resolution</h4>
+
+<p>
+
+Resolution describes the amount of detail contained in an image.
+
+</p>
+
+<h4>Common Formats</h4>
+
+<ul>
+
+<li>JPG</li>
+
+<li>PNG</li>
+
+<li>SVG</li>
+
+<li>PDF</li>
+
+</ul>
+
+`
+
+],
+
+[
+
+"Layout & Composition",
+
+`
+
+<h4>What is Layout?</h4>
+
+<p>
+
+Layout is the way text, images and other elements
+
+are arranged within a design.
+
+</p>
+
+<p>
+
+Good layout makes information easy to follow.
+
+</p>
+
+`
+
+],
+
+[
+
+"Branding & Visual Identity",
+
+`
+
+<h4>What is Branding?</h4>
+
+<p>
+
+Branding is how a business presents itself and is
+
+recognized by its audience.
+
+</p>
+
+<ul>
+
+<li>Logo</li>
+
+<li>Colours</li>
+
+<li>Fonts</li>
+
+<li>Style</li>
+
+</ul>
+
+`
+
+],
+
+[
+
+"Design Mistakes to Avoid",
+
+`
+
+<h4>Common Mistakes</h4>
+
+<ul>
+
+<li>Using too many fonts.</li>
+
+<li>Poor alignment.</li>
+
+<li>Too many colours.</li>
+
+<li>Low-quality images.</li>
+
+<li>Too much information.</li>
+
+</ul>
+
+`
+
+],
+
+[
+
+"Practical Design Project",
+
+`
+
+<h4>Your Task</h4>
+
+<p>
+
+Create a promotional flyer for a fictional business.
+
+</p>
+
+<h4>Include:</h4>
+
+<ul>
+
+<li>Business name</li>
+
+<li>Headline</li>
+
+<li>Images</li>
+
+<li>Contact information</li>
+
+<li>Colours</li>
+
+<li>Call to action</li>
+
+</ul>
+
+`
+
+]
+
+]
+
+},
+
+{
+
+name:"🖥️ CorelDRAW",
+
+description:
+
+"Learn how to create professional designs using CorelDRAW.",
+
+lessons:[
+
+"Introduction to CorelDRAW & Workspace",
+
+"Creating, Selecting & Transforming Objects",
+
+"Shapes, Lines & Basic Drawing",
+
+"Colour, Fills & Outlines",
+
+"Working with Text",
+
+"Aligning, Grouping & Arranging Objects",
+
+"Images, PowerClip & Basic Editing",
+
+"Creating Logos",
+
+"Creating Flyers, Posters & Business Cards",
+
+"Final CorelDRAW Project"
+
+].map((title,i)=>[
+
+title,
+
+`
+
+<h4>Lesson ${i+1}</h4>
+
+<p>
+
+In this lesson you will learn the fundamentals of
+
+<strong>${title}</strong>.
+
+</p>
+
+<h4>Learning Goal</h4>
+
+<p>
+
+Understand the tools and techniques needed to create
+
+clean, professional graphic designs in CorelDRAW.
+
+</p>
+
+<h4>Practice</h4>
+
+<p>
+
+Open CorelDRAW and practise the tools introduced in this lesson.
+
+</p>
+
+<h4>Assignment</h4>
+
+<p>
+
+Create a small design using what you learned and save your work.
+
+</p>
+
+`
+
+])
+
+},
+
+{
+
+name:"📱 Canva & PixelLab",
+
+description:
+
+"Create flyers, social media designs and brand graphics.",
+
+lessons:[
+
+"Introduction to Canva & PixelLab",
+
+"Understanding Templates & Design Sizes",
+
+"Text, Fonts & Typography",
+
+"Colours, Backgrounds & Elements",
+
+"Working with Images",
+
+"Social Media Graphics",
+
+"Creating Flyers & Posters",
+
+"Creating Business/Brand Designs",
+
+"Editing & Improving Designs",
+
+"Final Design Project & Presentation"
+
+].map((title,i)=>[
+
+title,
+
+`
+
+<h4>Lesson ${i+1}</h4>
+
+<p>
+
+Today you will learn about <strong>${title}</strong>.
+
+</p>
+
+<h4>Learning Goal</h4>
+
+<p>
+
+Understand how to use Canva or PixelLab to create
+
+attractive, clear and professional designs.
+
+</p>
+
+<h4>Practice</h4>
+
+<p>
+
+Open Canva or PixelLab and practise the technique from this lesson.
+
+</p>
+
+<h4>Assignment</h4>
+
+<p>
+
+Create a simple design using today's lesson and save it to your phone.
+
+</p>
+
+`
+
+])
+
+}
+
+];
+
+let currentCourse=0;
+
+let currentLesson=0;
+
+let completed=
+
+JSON.parse(localStorage.getItem("dreyCompleted"))||[];
+
+function showPage(page,button){
+
+document.querySelectorAll("section").forEach(section=>{
+
+section.classList.add("hidden");
+
+});
+
+document.getElementById(page).classList.remove("hidden");
+
+document.querySelectorAll(".nav-btn").forEach(btn=>{
+
+btn.classList.remove("active");
+
+});
+
+if(button){
+
+button.classList.add("active");
+
+}
+
+updateProgress();
+
+}
+
+function buildCourses(){
+
+let html="";
+
+courses.forEach((course,index)=>{
+
+let done=course.lessons.filter((_,i)=>
+
+completed.includes(index+"-"+i)
+
+).length;
+
+let percent=Math.round(
+
+(done/course.lessons.length)*100
+
+);
+
+html+=`
+
+<div class="card course-card">
+
+<h3>${course.name}</h3>
+
+<p>${course.description}</p>
+
+<span class="badge">
+
+${done}/10 lessons completed
+
+</span>
+
+<div class="progress-box">
+
+<div
+
+class="progress-bar"
+
+style="width:${percent}%">
+
+</div>
+
+</div>
+
+<button onclick="openCourse(${index})">
+
+${percent===100?
+
+"Review Course →":
+
+"View Lessons →"}
+
+</button>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("courseList").innerHTML=html;
+
+}
+
+function openCourse(index){
+
+currentCourse=index;
+
+document.getElementById("courseTitle").textContent=
+
+courses[index].name;
+
+let html="";
+
+courses[index].lessons.forEach((lesson,i)=>{
+
+let id=index+"-"+i;
+
+let done=completed.includes(id);
+
+html+=`
+
+<div class="card lesson">
+
+<div class="lesson-number">
+
+LESSON ${i+1}
+
+</div>
+
+<h3>${lesson[0]}</h3>
+
+<span class="badge">
+
+${done?"✅ Completed":"📖 Not completed"}
+
+</span>
+
+<br>
+
+<button
+
+class="btn"
+
+onclick="openLesson(${index},${i})">
+
+${done?"Review Lesson":"Start Lesson"}
+
+</button>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("lessonList").innerHTML=html;
+
+showPage("lessons");
+
+}
+
+function openLesson(courseIndex,lessonIndex){
+
+currentCourse=courseIndex;
+
+currentLesson=lessonIndex;
+
+let lesson=
+
+courses[courseIndex].lessons[lessonIndex];
+
+document.getElementById("lessonNumber").textContent=
+
+"LESSON "+(lessonIndex+1);
+
+document.getElementById("lessonTitle").textContent=
+
+lesson[0];
+
+document.getElementById("lessonContent").innerHTML=
+
+lesson[1];
+
+let id=courseIndex+"-"+lessonIndex;
+
+let button=
+
+document.getElementById("completeButton");
+
+if(completed.includes(id)){
+
+button.textContent="✅ Lesson Completed";
+
+button.style.background="#777";
+
+}else{
+
+button.textContent="✅ Mark Lesson Complete";
+
+button.style.background="#15a36d";
+
+}
+
+showPage("singleLesson");
+
+}
+
+function completeLesson(){
+
+let id=
+
+currentCourse+"-"+currentLesson;
+
+if(!completed.includes(id)){
+
+completed.push(id);
+
+localStorage.setItem(
+
+"dreyCompleted",
+
+JSON.stringify(completed)
+
+);
+
+}
+
+openLesson(currentCourse,currentLesson);
+
+updateProgress();
+
+buildCourses();
+
+}
+
+function updateProgress(){
+
+let total=30;
+
+let percent=
+
+Math.round((completed.length/total)*100);
+
+document.getElementById("progressText").textContent=
+
+percent+"% completed";
+
+document.getElementById("mainProgress").style.width=
+
+percent+"%";
+
+document.getElementById("completedCount").textContent=
+
+completed.length;
+
+document.getElementById("profileCompleted").textContent=
+
+completed.length;
+
+}
+
+function saveProfile(){
+
+let name=
+
+document.getElementById("nameInput").value.trim();
+
+if(!name){
+
+alert("Please enter your name.");
+
+return;
+
+}
+
+localStorage.setItem("dreyName",name);
+
+document.getElementById("profileName").textContent=
+
+name;
+
+document.getElementById("avatar").textContent=
+
+name.charAt(0).toUpperCase();
+
+alert("Profile saved successfully 🎉");
+
+}
+
+function loadProfile(){
+
+let name=
+
+localStorage.getItem("dreyName");
+
+if(name){
+
+document.getElementById("profileName").textContent=
+
+name;
+
+document.getElementById("avatar").textContent=
+
+name.charAt(0).toUpperCase();
+
+document.getElementById("nameInput").value=
+
+name;
+
+}
+
+}
+
+function startProject(){
+
+alert(
+
+"🔥 Your final project has started!\n\n"+
+
+"Create your brand and show what you have learned."
+
+);
+
+}
+
+buildCourses();
+
+loadProfile();
+
+updateProgress();
+
+</script>
+
+</body>
+
+</html>
